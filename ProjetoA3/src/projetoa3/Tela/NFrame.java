@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package projetoa3;
+package projetoa3.Tela;
 
 import java.awt.Color;
 import java.awt.Container;
@@ -18,16 +18,18 @@ import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 public class NFrame extends JFrame {
     
     public NFrame(){
-        Color cor = new Color(255,255,255);
+        
+        Color cor_fundo = new Color(255,255,255);
+        Color cor_borda = new Color(173, 216, 230);
         
         Container c = getContentPane();
         setLocation(100,50);
-        setTitle("Primeira tela!");
+        setTitle("Health and Care System");
         setSize (500, 500);
         setUndecorated(true);
-        c.setBackground (cor);
+        c.setBackground (cor_borda);
         getRootPane().setWindowDecorationStyle(JRootPane.FRAME);
-        getRootPane().setBorder(BorderFactory.createLineBorder(Color.cyan,3));
+        getRootPane().setBorder(BorderFactory.createLineBorder(Color.black,3));
         setDefaultCloseOperation(EXIT_ON_CLOSE);
            
     

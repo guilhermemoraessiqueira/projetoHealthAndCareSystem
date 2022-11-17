@@ -2,11 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package projetoa3;
+package projetoa3.Tela.telaCadastroAdm;
 
+import projetoa3.Tela.NFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import static java.lang.Integer.parseInt;
 import javax.swing.JOptionPane;
+import projetoa3.Administrador;
+import projetoa3.Tela.NFrame;
 
 /**
  *
@@ -28,18 +32,25 @@ public class AplicacaoEvento extends AplicacaoButton implements ActionListener
 		{
 			if(e.getSource()==B1)
 			{
-				JOptionPane.showMessageDialog(null, "Botao 1");
+				//JOptionPane.showMessageDialog(null, "Cadastro de Administrado:  \n Usuário: \n CPF: \n Nome \n ");
+                                JOptionPane.showMessageDialog(null, "Cadastro do Administrado: \n Usuário: "+ Tx1.getText() + "\n CPF: " + Tx2.getText() + "\n Nome: " + Tx3.getText());
+                                Administrador administrador = new Administrador(Tx1.getText(), Tx2.getText(), parseInt(Tx3.getText()), Tx4.getText());
 				
                                // Curso curso = new Curso(Integer.parseInt(Tx1.getText()),Tx2.getText(),Integer.parseInt(Tx3.getText()));
-	    	                //System.out.println("Curso:"+ curso.getCodigo()+ "-" + curso.getNome()+ "-" + curso.getPeriodo());
+	    	                System.out.println("Usuário: "+ administrador.getUsuario()+ " CPF " + administrador.getCpf()+ " Nome " + administrador.getNome());
      
 			}
 			if(e.getSource()==B2)
 			{
-				
-			JOptionPane.showMessageDialog(null, "Botao 2");
+			
+                        
+                            
+			JOptionPane.showMessageDialog(null, "Altere o que você precisa");
+                        
+                        
 			Tx1.setText(" ");
 			Tx2.setText(" ");
+                     
 			
 			}
 			if (e.getSource() == B3)
