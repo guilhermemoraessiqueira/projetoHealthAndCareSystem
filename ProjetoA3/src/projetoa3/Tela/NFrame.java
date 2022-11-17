@@ -6,6 +6,7 @@ package projetoa3.Tela;
 
 import java.awt.Color;
 import java.awt.Container;
+import java.awt.FlowLayout;
 import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 import javax.swing.JRootPane;
@@ -30,7 +31,7 @@ public class NFrame extends JFrame {
         Container c = getContentPane();
         setLocation(100,50);
         setTitle("Health and Care System");
-        setSize (500, 500);
+        setSize (500, 600);
         setUndecorated(true);
         c.setBackground (cor_borda);
         getRootPane().setWindowDecorationStyle(JRootPane.FRAME);
