@@ -18,7 +18,7 @@ import projetoa3.Tela.NFrame;
  */
 public class AplicacaoEvento extends AplicacaoButton implements ActionListener
 	{
-		AplicacaoEvento()
+		public AplicacaoEvento()
 		{
 			B1.addActionListener(this);// Adiciona ações ao botão
 			B2.addActionListener(this);
