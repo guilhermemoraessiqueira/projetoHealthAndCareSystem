@@ -1,10 +1,10 @@
 package projetoa3.Tela.telaCadastroPaciente;
 
+
 import projetoa3.Tela.NFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import static java.lang.Integer.parseInt;
-import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import projetoa3.Administrador;
 import projetoa3.Tela.NFrame;
@@ -13,7 +13,7 @@ import projetoa3.Tela.NFrame;
  *
  * @author Guilherme
  */
-public class AplicacaoEventoCadast extends AplicacaoButtonCadastroPaciente{
+public class AplicacaoEventoCadast extends AplicacaoButtonCadastroPaciente implements ActionListener{
         
     
 		public AplicacaoEventoCadast()

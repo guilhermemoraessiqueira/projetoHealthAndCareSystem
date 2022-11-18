@@ -84,7 +84,13 @@ public class AplicacaoComboBoxCadastroPaciente extends AplicacaoTextCadastroPaci
         add(comboAno);
         
         //adicionando itens ao ano
+        comboAno.addItem(1910);
         comboAno.addItem(1911);
+        comboAno.addItem(1911);
+        comboAno.addItem(1911);
+        comboAno.addItem(1911);
+        comboAno.addItem(1911);
+        
         
         //colocando o item 1 como selecionado ao inicializar
         comboAno.setSelectedIndex(0);
