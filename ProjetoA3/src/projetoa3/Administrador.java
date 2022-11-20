@@ -12,13 +12,22 @@ public class Administrador extends Pessoas {
     private String usuario;
     private String senha;
 
-    public Administrador(String usuario, String senha, int cpf, String nome) {
+    public Administrador(String usuario, String senha, String cpf, String nome) {
         super(cpf, nome);
         this.usuario = usuario;
         this.senha = senha;
     }
 
-
+    //--------------------------------------//
+    
+    public Administrador (){
+        this.usuario = "";
+        this.senha = "";
+        this.cpf ="";
+        this.nome="";
+        
+    }
+    
 
     public String getUsuario() {
         return usuario;
@@ -35,6 +44,9 @@ public class Administrador extends Pessoas {
     public void setSenha(String senha) {
         this.senha = senha;
     }
+    
+    
+    //metodos crud
     
     public boolean excluir(){        
         return false;       

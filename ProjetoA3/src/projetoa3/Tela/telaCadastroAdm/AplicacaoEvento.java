@@ -8,9 +8,14 @@ import projetoa3.Tela.NFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import static java.lang.Integer.parseInt;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import projetoa3.Administrador;
+import projetoa3.bancoDeDados.AdministradorDAO;
 import projetoa3.Tela.NFrame;
+import projetoa3.bancoDeDados.conexao;
 
 /**
  *
@@ -18,27 +23,54 @@ import projetoa3.Tela.NFrame;
  */
 public class AplicacaoEvento extends AplicacaoButton implements ActionListener
 	{
+    
+            Administrador administrador = new Administrador();
+            conexao conn = new conexao();
+            AdministradorDAO administradorBD;
+        
+            
+                        
 		public AplicacaoEvento()
 		{
-			B1.addActionListener(this);// Adiciona ações ao botão
-			B2.addActionListener(this);
-			B3.addActionListener(this);
-			B4.addActionListener(this);
-			B5.addActionListener(this);
-			B6.addActionListener(this);
+			B1.addActionListener(this);// incluir
+			B2.addActionListener(this);// alterar
+			B3.addActionListener(this);// consultar
+			B4.addActionListener(this);// excluir
+			B5.addActionListener(this);// sair
+			B6.addActionListener(this);// TODOS
 			
 		}
-		public void actionPerformed(ActionEvent e)//
+		public void actionPerformed(ActionEvent e)
 		{
 			if(e.getSource()==B1)
 			{
-				//JOptionPane.showMessageDialog(null, "Cadastro de Administrado:  \n Usuário: \n CPF: \n Nome \n ");
-                                JOptionPane.showMessageDialog(null, "Cadastro do Administrado: \n Usuário: "+ Tx1.getText() + "\n CPF: " + Tx2.getText() + "\n Nome: " + Tx3.getText());
-                                Administrador administrador = new Administrador(Tx1.getText(), Tx2.getText(), parseInt(Tx3.getText()), Tx4.getText());
-				
-                               // Curso curso = new Curso(Integer.parseInt(Tx1.getText()),Tx2.getText(),Integer.parseInt(Tx3.getText()));
-	    	                System.out.println("Usuário: "+ administrador.getUsuario()+ " CPF " + administrador.getCpf()+ " Nome " + administrador.getNome());
-     
+                            administrador.setUsuario(Tx1.getText());
+                            administrador.setSenha(Tx2.getText());
+                            administrador.setCpf(Tx3.getText());
+                            administrador.setNome(Tx4.getText());
+                            
+                            System.out.println(administrador.getUsuario());
+                            System.out.println(administrador.getSenha());
+                            System.out.println(administrador.getCpf());
+                            System.out.println(administrador.getNome());
+                            
+                            try {
+                                administradorBD = new AdministradorDAO(conn);
+                                administradorBD.insert(administrador);
+                            } catch (SQLException ex) {
+                                Logger.getLogger(AplicacaoEvento.class.getName()).log(Level.SEVERE, null, ex);
+                            } catch (ClassNotFoundException ex) {
+                                Logger.getLogger(AplicacaoEvento.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                            
+                            //confirmação de cadastro
+                            JOptionPane.showMessageDialog(null, "Cadastro do Administrado : \n Usuário: "+ Tx1.getText() + "\n CPF: " + Tx2.getText() + "\n Nome: " + Tx3.getText());
+                            
+                            
+                           //conectando no banco e cadastrando
+                            
+                            
+
 			}
 			if(e.getSource()==B2)
 			{

@@ -4,7 +4,11 @@
  */
 package projetoa3;
 
+import java.util.Calendar;
+import java.text.DateFormat;
 import java.util.Date;
+import java.text.SimpleDateFormat;
+import java.text.ParseException;
 
 /**
  *
@@ -15,11 +19,19 @@ public class Paciente extends Pessoas{
     private boolean deficiencia;
     private String se_sim_qual;
 
-    public Paciente(Date data_nasc, boolean deficiencia, String se_sim_qual, int cpf, String nome) {
+    public Paciente(Date data_nasc, boolean deficiencia, String se_sim_qual, String cpf, String nome) {
         super(cpf, nome);
         this.data_nasc = data_nasc;
         this.deficiencia = deficiencia;
         this.se_sim_qual = se_sim_qual;
+    }
+    
+    public Paciente (){
+        this.data_nasc = ("00/00/0000");
+        this.sen = "";
+        this.cpf ="";
+        this.nome="";
+        
     }
 
     public Date getData_nasc() {

@@ -7,7 +7,9 @@ import java.awt.event.ActionListener;
 import static java.lang.Integer.parseInt;
 import javax.swing.JOptionPane;
 import projetoa3.Administrador;
+import projetoa3.bancoDeDados.AdministradorDAO;
 import projetoa3.Tela.NFrame;
+import projetoa3.bancoDeDados.conexao;
 
 /**
  *
@@ -15,6 +17,10 @@ import projetoa3.Tela.NFrame;
  */
 public class AplicacaoEventoCadast extends AplicacaoButtonCadastroPaciente implements ActionListener{
         
+            Administrador administrador = new Administrador();
+            conexao conn = new conexao();
+            AdministradorDAO administradorDAO;
+            
     
 		public AplicacaoEventoCadast()
 		{
@@ -31,8 +37,9 @@ public class AplicacaoEventoCadast extends AplicacaoButtonCadastroPaciente imple
 		{
 			if(e.getSource()==B1)
 			{
-				//JOptionPane.showMessageDialog(null, "Cadastro de Administrado:  \n Usuário: \n CPF: \n Nome \n ");
-                                JOptionPane.showMessageDialog(null, "B1");
+                            administrador.setCpf(Tx1.getText());
+                            System.out.println(administrador.getCpf());
+                            
                                 
      
 			}

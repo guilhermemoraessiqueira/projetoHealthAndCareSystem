@@ -9,22 +9,28 @@ package projetoa3;
  * @author Guilherme
  */
 public class Pessoas {
-    private int cpf;
-    private String nome;
+    public String cpf;
+    public String nome;
 
-    public Pessoas(int cpf, String nome) {
+    public Pessoas(String cpf, String nome) {
         this.cpf = cpf;
         this.nome = nome;
     }
-
-    public int getCpf() {
+    
+    public Pessoas() {
+        this.cpf = "";
+        this.nome = "";
+    }
+   
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(int cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
-
+    
+    
     public String getNome() {
         return nome;
     }
