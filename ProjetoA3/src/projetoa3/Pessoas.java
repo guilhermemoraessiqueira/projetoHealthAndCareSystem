@@ -9,6 +9,7 @@ package projetoa3;
  * @author Guilherme
  */
 public class Pessoas {
+
     public String cpf;
     public String nome;
 
@@ -16,12 +17,12 @@ public class Pessoas {
         this.cpf = cpf;
         this.nome = nome;
     }
-    
+
     public Pessoas() {
         this.cpf = "";
         this.nome = "";
     }
-   
+
     public String getCpf() {
         return cpf;
     }
@@ -29,8 +30,7 @@ public class Pessoas {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
-    
-    
+
     public String getNome() {
         return nome;
     }
@@ -38,6 +38,5 @@ public class Pessoas {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    
-    
+
 }

@@ -23,8 +23,8 @@ public class Administrador extends Pessoas {
     public Administrador (){
         this.usuario = "";
         this.senha = "";
-        this.cpf ="";
-        this.nome="";
+        this.cpf = "";
+        this.nome = "";
         
     }
     
@@ -63,6 +63,8 @@ public class Administrador extends Pessoas {
     public boolean alterar(){
         return false;
     }
+    
+  
     
     
 }

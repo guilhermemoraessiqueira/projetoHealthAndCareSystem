@@ -4,17 +4,14 @@
  */
 package projetoa3;
 
-import java.util.Calendar;
-import java.text.DateFormat;
 import java.util.Date;
-import java.text.SimpleDateFormat;
-import java.text.ParseException;
 
 /**
  *
  * @author Guilherme
  */
-public class Paciente extends Pessoas{
+public class Paciente extends Pessoas {
+
     private Date data_nasc;
     private boolean deficiencia;
     private String se_sim_qual;
@@ -24,14 +21,6 @@ public class Paciente extends Pessoas{
         this.data_nasc = data_nasc;
         this.deficiencia = deficiencia;
         this.se_sim_qual = se_sim_qual;
-    }
-    
-    public Paciente (){
-        this.data_nasc = ("00/00/0000");
-        this.sen = "";
-        this.cpf ="";
-        this.nome="";
-        
     }
 
     public Date getData_nasc() {
@@ -57,17 +46,11 @@ public class Paciente extends Pessoas{
     public void setSe_sim_qual(String se_sim_qual) {
         this.se_sim_qual = se_sim_qual;
     }
-    
-    public void incluirAtendimento(){
+
+    public void incluirAtendimento() {
     }
-    
-    public void incluirCadastro(){      
+
+    public void incluirCadastro() {
     }
-    
-    
-    
-    
-    
-    
-    
+
 }

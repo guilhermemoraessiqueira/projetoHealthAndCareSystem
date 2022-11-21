@@ -56,7 +56,7 @@ public class AplicacaoEvento extends AplicacaoButton implements ActionListener
                             
                             try {
                                 administradorBD = new AdministradorDAO(conn);
-                                administradorBD.insert(administrador);
+                                administradorBD.altera(administrador);
                             } catch (SQLException ex) {
                                 Logger.getLogger(AplicacaoEvento.class.getName()).log(Level.SEVERE, null, ex);
                             } catch (ClassNotFoundException ex) {
@@ -72,26 +72,72 @@ public class AplicacaoEvento extends AplicacaoButton implements ActionListener
                             
 
 			}
+                        //Alterar
 			if(e.getSource()==B2)
 			{
-			
-                        
                             
-			JOptionPane.showMessageDialog(null, "Altere o que você precisa");
+                            
+                            administrador.setUsuario(Tx1.getText());
+                            administrador.setSenha(Tx2.getText());
+                            administrador.setNome(Tx4.getText());
+                            administrador.setCpf(Tx3.getText());
+                            
+                            try {
+                                administradorBD = new AdministradorDAO(conn);
+                                administradorBD.altera(administrador);
+
+                            
+                            
+                            
+                            
+                            } catch (SQLException ex) {
+                                Logger.getLogger(AplicacaoEvento.class.getName()).log(Level.SEVERE, null, ex);
+                            } catch (ClassNotFoundException ex) {
+                                Logger.getLogger(AplicacaoEvento.class.getName()).log(Level.SEVERE, null, ex);
+                            }
                         
-                        
-			Tx1.setText(" ");
-			Tx2.setText(" ");
+			
                      
 			
 			}
+                        
+                        //consultar
 			if (e.getSource() == B3)
 			{
-				JOptionPane.showMessageDialog(null, "Botao 3");	
+				JOptionPane.showMessageDialog(null, "Botao 3");
+                                
+                                try {
+                            administradorBD = new AdministradorDAO(conn);
+                            administrador.setCpf(Tx3.getText());
+                            administradorBD.consulta(administrador);
+                            
+                            Tx1.setText("" + administrador.getUsuario());
+                            Tx4.setText("" + administrador.getNome());
+                            
+                            } catch (SQLException ex) {
+                                Logger.getLogger(AplicacaoEvento.class.getName()).log(Level.SEVERE, null, ex);
+                            } catch (ClassNotFoundException ex) {
+                                Logger.getLogger(AplicacaoEvento.class.getName()).log(Level.SEVERE, null, ex);
+                            }
 			}
 
 			if(e.getSource()==B4)
 			{
+                            try {
+                            administradorBD = new AdministradorDAO(conn);
+                            administrador.setCpf(Tx3.getText());
+                            administradorBD.exlcui(administrador);
+                            
+                            Tx1.setText("" + administrador.getUsuario());
+                            Tx4.setText("" + administrador.getNome());
+                            
+                            } catch (SQLException ex) {
+                                Logger.getLogger(AplicacaoEvento.class.getName()).log(Level.SEVERE, null, ex);
+                            } catch (ClassNotFoundException ex) {
+                                Logger.getLogger(AplicacaoEvento.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                            
+                            
 				JOptionPane.showMessageDialog(null, "Botao 4");	
 				
 			}
