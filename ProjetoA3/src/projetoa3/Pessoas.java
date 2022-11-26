@@ -10,8 +10,8 @@ package projetoa3;
  */
 public class Pessoas {
 
-    public String cpf;
-    public String nome;
+    protected String cpf;
+    protected String nome;
 
     public Pessoas(String cpf, String nome) {
         this.cpf = cpf;

@@ -54,9 +54,4 @@ public class AplicacaoLabel extends NFrame{
 
 
 	}
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		new AplicacaoLabel().show();
-
-	}
 }

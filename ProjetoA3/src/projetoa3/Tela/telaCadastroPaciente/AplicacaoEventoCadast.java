@@ -30,6 +30,7 @@ public class AplicacaoEventoCadast extends AplicacaoButtonCadastroPaciente imple
 			B1.addActionListener(this);// Adiciona ações ao botão
 			B2.addActionListener(this);
 			B3.addActionListener(this);
+                        this.setResizable(false);
 			
 			
 		}

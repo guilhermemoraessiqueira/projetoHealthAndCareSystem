@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import projetoa3.Administrador;
 import projetoa3.bancoDeDados.conexao;
@@ -32,6 +33,7 @@ public class AdministradorDAO {
                 + administrador.getNome() + "\");";
 
         System.out.println(sql);
+        
 
         try {
             PreparedStatement ps = c.prepareStatement(sql);
@@ -66,7 +68,6 @@ public class AdministradorDAO {
 
     }
 
-    
     public void altera(Administrador administrador) throws SQLException {
 
         //query para alterar
@@ -104,37 +105,66 @@ public class AdministradorDAO {
 
         }
     }
-    
-    public void exlcui(Administrador administrador) throws SQLException{
-        
-        String sql ="DELETE FROM administradores WHERE cpf =?";
+
+    public void exlcui(Administrador administrador) throws SQLException {
+
+        int resultado = JOptionPane.showInternalConfirmDialog(null, "Deseja realmente exlcuir o administrador: " + administrador.getUsuario() + "\n"+ "Nome:" + administrador.getNome() + "\n"+ "CPF:" + administrador.getCpf());
+
+        String sql = "DELETE FROM administradores WHERE cpf =?";
         System.out.println(sql);
-        
+
         PreparedStatement pstm = null;
-        
-        
-        
-        try{
-            
-           //classe para executar query
-            pstm = (PreparedStatement) c.prepareStatement(sql);
 
-            //qual cpf que deseja excluir
-            pstm.setString(1, administrador.getCpf());
+        if (resultado == JOptionPane.YES_OPTION) {
+            System.out.println("CONFIRMAÇÃO DA EXCLUSAO ACEITA PELO USUARIO");
+            try {
 
-            pstm.execute();
-       
+                //classe para executar query
+                pstm = (PreparedStatement) c.prepareStatement(sql);
+
+                //qual cpf que deseja excluir
+                pstm.setString(1, administrador.getCpf());
+                
+                
+
+                pstm.execute();
+                
+                
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
             
-            
-            
-        }catch(Exception e){
-            e.printStackTrace();       
+        }
+        if (resultado == JOptionPane.NO_OPTION) {
+            JOptionPane.showMessageDialog(null, "Cancelado");
+
+        }        
     }
-    }
+    
+    public ArrayList listaAdministrador(){
+        ArrayList<Administrador> dados = new ArrayList();
+        String sql = "SELECT * FROM administradores";
+
+        try {
+              PreparedStatement ps = c.prepareStatement(sql);
+
+                ResultSet rs = ps.executeQuery();
+
+            rs = ps.executeQuery();
+            while (rs.next())
+            {   Administrador administrador = new Administrador();
+            
+                administrador.setCpf(rs.getString("cpf"));
+                administrador.setNome(rs.getString("nome"));
+                administrador.setUsuario(rs.getString("usuario"));
+                System.out.println(administrador.getNome());
+                
+                dados.add(administrador);
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+        return dados;
+       }
 }
-               
-
-
-
-
-        

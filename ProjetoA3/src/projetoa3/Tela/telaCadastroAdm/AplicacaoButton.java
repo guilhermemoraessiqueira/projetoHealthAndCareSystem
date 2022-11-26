@@ -56,8 +56,4 @@ public class AplicacaoButton extends AplicacaoText {
         getContentPane().add(B6);
     }
 
-    public static void main(String arg[]) {
-        new AplicacaoButton().show();
-    }
-
 }

@@ -39,8 +39,4 @@ public class AplicacaoText extends AplicacaoLabel {
 
     }
 
-    public static void main(String arg[]) {
-        new AplicacaoText().show();
-    }
-
 }

@@ -19,6 +19,7 @@ public class AplicacaoEventoLogin extends AplicacaoButtonLogin implements Action
 		{
 			B1.addActionListener(this);// Adiciona ações ao botão
 			B2.addActionListener(this);
+                        this.setResizable(false);
 			
 			
 		}
