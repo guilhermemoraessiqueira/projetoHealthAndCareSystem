@@ -37,13 +37,32 @@ public class AplicacaoEventoCadast extends AplicacaoButtonCadastroPaciente imple
 		public void actionPerformed(ActionEvent e)//
 		{
 			if(e.getSource()==B1)
-			{
-                            administrador.setCpf(Tx1.getText());
-                            System.out.println(administrador.getCpf());
-                            
-                                
-     
-			}
+			                 {
+                        // TODO add your handling code here:
+
+                        //pega o login do usuário
+                        String usuario = Tx1.getText();
+                        //pega a senha do usuário
+                        String senha = new String(Tx2.getText());
+
+                        try {
+                            //verifica se o usuário é válido
+                            Administrador administrador = new Administrador(usuario, senha);
+                            AdministradorDAO dao = new AdministradorDAO();
+
+                            if (dao.existe(Administrador)) {
+                                JOptionPane.showMessageDialog(null, "Bem vindo, " + usuario.getNome() + "!");
+                                /*CRUDTela t = new CRUDTela();
+                                t.setVisible(true);
+                                this.dispose();*/
+                            } else {
+                                JOptionPane.showMessageDialog(null, "Usuário inválido.");
+                            }
+                        } catch (Exception e) {
+                            // Não é necessário essa parte
+                            JOptionPane.showMessageDialog(null, "Problemas técnicos");
+                        }
+                    }
 			if(e.getSource()==B2)
 			{
 			

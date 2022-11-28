@@ -4,6 +4,8 @@
  */
 package projetoa3;
 
+import projetoa3.Pessoas;
+
 /**
  *
  * @author Guilherme
@@ -17,6 +19,7 @@ public class Administrador extends Pessoas {
         this.usuario = usuario;
         this.senha = senha;
     }
+    
 
     //--------------------------------------//
     
@@ -27,6 +30,9 @@ public class Administrador extends Pessoas {
         this.nome = "";
         
     }
+
+    public Administrador(String usuario, String senha) {
+          }
     
 
     public String getUsuario() {
@@ -47,22 +53,24 @@ public class Administrador extends Pessoas {
     
     
     //metodos crud
+       
+    public boolean incluir(){
+        return false;
+    }    
     
-    public boolean excluir(){        
-        return false;       
-    }
-    
+    public boolean alterar(){
+        return false;
+    }    
+        
     public boolean consultar(){
         return false;
     }
     
-    public boolean incluir(){
-        return false;
+    public boolean excluir(){        
+        return false;       
     }
-    
-    public boolean alterar(){
-        return false;
-    }
+
+
     
   
     

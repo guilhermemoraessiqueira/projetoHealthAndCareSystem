@@ -4,9 +4,20 @@
  */
 package projetoa3.Tela.telaLoginAdm.AplicacaoTextLogin;
 
+import projetoa3.Administrador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import javax.swing.JOptionPane;
+import projetoa3.bancoDeDados.AdministradorDAO;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.naming.spi.DirObjectFactory;
+import projetoa3.bancoDeDados.conexao;
+
 
 
 /**
@@ -15,6 +26,10 @@ import javax.swing.JOptionPane;
  */
 public class AplicacaoEventoLogin extends AplicacaoButtonLogin implements ActionListener
 	{
+    
+    
+    
+    
 		public AplicacaoEventoLogin()
 		{
 			B1.addActionListener(this);// Adiciona ações ao botão
@@ -25,14 +40,36 @@ public class AplicacaoEventoLogin extends AplicacaoButtonLogin implements Action
 		}
 		public void actionPerformed(ActionEvent e)//
 		{
-			if(e.getSource()==B1)
-			{
-				//JOptionPane.showMessageDialog(null, "Cadastro de Administrado:  \n Usuário: \n CPF: \n Nome \n ");
-                                JOptionPane.showMessageDialog(null, "B1 LOGIN");
-				
-                               // Curso curso = new Curso(Integer.parseInt(Tx1.getText()),Tx2.getText(),Integer.parseInt(Tx3.getText()));
-	    	               
-			}
+                    
+                     
+                   
+			if (e.getSource() == B1) {
+                            
+                        //pega o usuario do usuário
+                        String usuario = Tx1.getText();
+                        //pega a senha do usuário
+                        String senha = new String(Tx2.getPassword());
+                            
+
+                        try {
+                            //verifica se o usuário é válido
+                            Administrador administrador = new Administrador(usuario, senha);
+                            AdministradorDAO dao = new AdministradorDAO();
+                            System.out.println(senha);
+
+                            if (dao.existe(administrador)) {
+                                JOptionPane.showMessageDialog(null, "Bem vindo, " + administrador.getNome() + "!");
+                                
+                                //this.dispose();
+                            } else {
+                                JOptionPane.showMessageDialog(null, "Usuário inválido.");
+                            }
+                        } catch (Exception es) {
+                            // Não é necessário essa parte
+                            JOptionPane.showMessageDialog(null, "Problemas técnicos");
+                        }
+                    }
+                        
 			if(e.getSource()==B2)
 			{
 			
@@ -46,6 +83,11 @@ public class AplicacaoEventoLogin extends AplicacaoButtonLogin implements Action
                      
 			
 			}
+                        
+                        
+                        
+                        
+                        
 		}
 
 		public static void main ( String arg[])

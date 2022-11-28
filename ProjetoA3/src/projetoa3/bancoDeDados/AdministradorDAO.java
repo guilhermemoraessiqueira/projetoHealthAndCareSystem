@@ -9,6 +9,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import projetoa3.Administrador;
 import projetoa3.bancoDeDados.conexao;
@@ -20,9 +22,13 @@ import projetoa3.bancoDeDados.conexao;
 public class AdministradorDAO {
 
     private Connection c;
-
+    
     public AdministradorDAO(conexao conn) throws SQLException, ClassNotFoundException {
         c = conn.obtemConexao();
+    }
+    
+    public AdministradorDAO(){
+        
     }
 
     public void insert(Administrador administrador) {
@@ -167,4 +173,27 @@ public class AdministradorDAO {
         }
         return dados;
        }
+    
+    public boolean existe (Administrador administador) throws Exception{
+       String sql = "SELECT * FROM administradores WHERE senha = ? AND usuario = ?;";
+        System.out.println(sql);
+        
+        
+       
+       try (Connection conn = conexao.obtemConexao();
+               PreparedStatement pq = conn.prepareStatement(sql)){
+           pq.setString(1, administador.getSenha());
+           pq.setString(2, administador.getUsuario());
+           
+           try (ResultSet rs = pq.executeQuery()){
+               return rs.next();
+           }
+       }
+    }
+    
+   
+
 }
+
+
+

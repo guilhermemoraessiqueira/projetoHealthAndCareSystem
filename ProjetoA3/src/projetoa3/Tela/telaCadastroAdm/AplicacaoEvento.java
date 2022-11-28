@@ -50,11 +50,6 @@ public class AplicacaoEvento extends AplicacaoButton implements ActionListener {
             administrador.setCpf(Tx3.getText());
             administrador.setNome(Tx4.getText());
 
-            System.out.println(administrador.getUsuario());
-            System.out.println(administrador.getSenha());
-            System.out.println(administrador.getCpf());
-            System.out.println(administrador.getNome());
-            
             //confirmação de cadastro
             int resultado = JOptionPane.showConfirmDialog(null, "Cadastro do Administrado : \n Usuário: " + Tx1.getText() + "\n CPF: " + Tx2.getText() + "\n Nome: " + Tx3.getText());
           

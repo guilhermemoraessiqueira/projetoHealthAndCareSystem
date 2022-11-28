@@ -12,7 +12,8 @@ import javax.swing.JTextField;
  * @author Guilherme
  */
 public class AplicacaoTextLogin extends AplicacaoLabelLogin{
-    public JTextField Tx1, Tx2,Tx3,Tx4;
+    public JTextField Tx1;
+    public JPasswordField Tx2;
     
             public AplicacaoTextLogin(){
                 Tx1 = new JTextField();

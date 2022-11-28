@@ -6,19 +6,24 @@ package projetoa3.bancoDeDados;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author Guilherme
  */
 public class conexao {
-    private String usuario = "root";
-    private String senha = "Euamominhamae26";
-    private String host = "localhost";
-    private String porta = "3306";
-    private String bd = "projetoA3";
+
+    private static String usuario = "root";
+    private static String senha = "Euamominhamae26";
+    private static String host = "localhost";
+    private static String porta = "3306";
+    private static String bd = "projetoA3";
     
-    public Connection obtemConexao (){
+    public static Connection obtemConexao (){
         try{
             Connection c = DriverManager.getConnection("jdbc:mysql://" + host + ":" + porta + "/" + bd+"?useTimezone=true&serverTimezone=UTC", usuario, senha);
             System.out.println("Banco Conectado com Sucesso!!!!");
@@ -30,6 +35,7 @@ public class conexao {
             return null;
         }
     }
+       
     
     
 }
