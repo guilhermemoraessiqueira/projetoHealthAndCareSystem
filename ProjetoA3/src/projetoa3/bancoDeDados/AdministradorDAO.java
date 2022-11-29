@@ -175,15 +175,19 @@ public class AdministradorDAO {
        }
     
     public boolean existe (Administrador administador) throws Exception{
-       String sql = "SELECT * FROM administradores WHERE senha = ? AND usuario = ?;";
+      
+       String sql = "SELECT * FROM administradores WHERE senha = ? AND usuario = ?";
+       
         System.out.println(sql);
+      
         
         
        
        try (Connection conn = conexao.obtemConexao();
-               PreparedStatement pq = conn.prepareStatement(sql)){
+               PreparedStatement pq = conn.prepareStatement(sql)){         
            pq.setString(1, administador.getSenha());
            pq.setString(2, administador.getUsuario());
+           System.out.println(pq);
            
            try (ResultSet rs = pq.executeQuery()){
                return rs.next();

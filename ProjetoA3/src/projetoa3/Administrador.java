@@ -19,6 +19,10 @@ public class Administrador extends Pessoas {
         this.usuario = usuario;
         this.senha = senha;
     }
+    public Administrador(String usuario, String senha) {
+        this.usuario = usuario;
+        this.senha = senha;
+    }
     
 
     //--------------------------------------//
@@ -29,11 +33,7 @@ public class Administrador extends Pessoas {
         this.cpf = "";
         this.nome = "";
         
-    }
-
-    public Administrador(String usuario, String senha) {
-          }
-    
+    }   
 
     public String getUsuario() {
         return usuario;
