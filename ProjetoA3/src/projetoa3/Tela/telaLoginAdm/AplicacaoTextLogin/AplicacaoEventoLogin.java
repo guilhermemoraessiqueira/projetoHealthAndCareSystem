@@ -16,7 +16,9 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.naming.spi.DirObjectFactory;
+import projetoa3.Menu.MenuPrincipal.MenuPrincipalEvento;
 import projetoa3.Tela.telaCadastroAdm.AplicacaoEvento;
+import projetoa3.Tela.telaCadastroAdm.TodosTela;
 import projetoa3.bancoDeDados.conexao;
 
 
@@ -60,9 +62,14 @@ public class AplicacaoEventoLogin extends AplicacaoButtonLogin implements Action
 
                             if (dao.existe(administrador)) {
                                 JOptionPane.showMessageDialog(null, "Bem vindo, " + administrador.getUsuario() + "!");
-                                AplicacaoEvento t = new AplicacaoEvento(); 
+                                AplicacaoEvento t = new AplicacaoEvento();
                                 t.setVisible(true);
-                                this.dispose();
+                                
+                                
+                                
+                                //AplicacaoEvento t = new AplicacaoEvento();
+                               // t.setVisible(true);
+                                //this.dispose();
                             } else {
                                 JOptionPane.showMessageDialog(null, "Usuário inválido.");
                             }

@@ -6,6 +6,7 @@ package projetoa3.Tela.telaCadastroPaciente;
 
 
 import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -219,9 +220,11 @@ public class AplicacaoComboBoxCadastroPaciente extends AplicacaoTextCadastroPaci
         add(comboDef);
         
         //adicionando itens 
-        comboDef.addItem(" ");
-        comboDef.addItem("Sim");
+       
+        comboDef.addItem(" ");       
         comboDef.addItem("Não");
+        comboDef.addItem("Sim");
+
         
         //colocando o item 1 como selecionado ao inicializar
         comboDef.setSelectedIndex(0);

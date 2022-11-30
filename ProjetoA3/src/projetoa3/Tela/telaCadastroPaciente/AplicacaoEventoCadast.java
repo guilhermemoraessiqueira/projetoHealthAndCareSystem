@@ -24,39 +24,61 @@ import projetoa3.bancoDeDados.conexao;
  * @author Guilherme
  */
 public class AplicacaoEventoCadast extends AplicacaoButtonCadastroPaciente implements ActionListener{
+
         
             Paciente paciente = new Paciente();
             conexao conn = new conexao();
-            PacienteDAO pacienteDAO;
+            PacienteDAO pacienteBD;
             
     
-		public AplicacaoEventoCadast()
-		{
-                 
-                    //
-                    
+		public AplicacaoEventoCadast(){
 			B1.addActionListener(this);// Adiciona ações ao botão
 			B2.addActionListener(this);
 			B3.addActionListener(this);
-                        this.setResizable(false);
-			
-			
+                        comboDef.addActionListener(this);
+                        this.setResizable(false);	
+                         Tx3.setVisible(false);
+                         L7.setVisible(false);
+                         
+                         
 		}
+
 		public void actionPerformed(ActionEvent e)//
 		{
+                    if(comboDef.getSelectedItem() == "Sim"){
+                               Tx3.setVisible(true);
+                               Tx3.revalidate();
+                               L7.setVisible(true);
+                               L7.revalidate();
+                           }else{
+                                    Tx3.setVisible(false);
+                                    L7.setVisible(false);                           
+                                }
+
                     SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+                    
+                    
 			if(e.getSource()==B1){
-                            
-                            
-                            
-			
-                    }
+           /* try {
+                pacienteBD = new PacienteDAO(conn);
+                paciente.setCpf(Tx2.getText());
+                pacienteBD.consulta(paciente);
+
+                Tx1.setText("" + paciente.getNome());
+                comboDia.setSelectedItem()("" + paciente.getNome());
+
+            } catch (SQLException ex) {
+                Logger.getLogger(AplicacaoEvento.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(AplicacaoEvento.class.getName()).log(Level.SEVERE, null, ex);
+            }*/
+        }
 			if(e.getSource()==B2)
 			{
                             paciente.setNome(Tx1.getText());
-                            paciente.setCpf(Tx2.getText());
-                            
-                            
+                            paciente.setCpf(Tx2.getText());                         
+                           paciente.setSe_sim_qual(Tx3.getText());
+                       
                             String data = (String) comboDia.getSelectedItem() +"/"+ comboMes.getSelectedItem()+"/"+comboAno.getSelectedItem();
                             
                             System.out.println(data);
@@ -86,7 +108,10 @@ public class AplicacaoEventoCadast extends AplicacaoButtonCadastroPaciente imple
 			}
 			if (e.getSource() == B3)
 			{
-				JOptionPane.showMessageDialog(null, "Botao 3");	
+				JOptionPane.showMessageDialog(null, "Botao 3");
+                                
+                                
+                           
 			}
 
 			
