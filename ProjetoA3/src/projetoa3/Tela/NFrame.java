@@ -24,8 +24,6 @@ public class NFrame extends JFrame {
     public NFrame(){
         
         this.setIconImage(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone.png")).getImage());
-        
-        Color cor_fundo = new Color(255,255,255);
         Color cor_borda = new Color(173, 216, 230);
         
         Container c = getContentPane();

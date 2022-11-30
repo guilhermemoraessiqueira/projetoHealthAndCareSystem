@@ -4,16 +4,14 @@
  */
 package projetoa3.Tela.telaCadastroAdm;
 
-import projetoa3.Tela.NFrame;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import static java.lang.Integer.parseInt;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
 import projetoa3.Administrador;
 import projetoa3.bancoDeDados.AdministradorDAO;
 import projetoa3.Tela.NFrame;

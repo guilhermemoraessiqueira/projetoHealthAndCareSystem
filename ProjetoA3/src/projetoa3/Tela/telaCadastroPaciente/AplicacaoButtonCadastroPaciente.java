@@ -23,12 +23,12 @@ public class AplicacaoButtonCadastroPaciente extends AplicacaoCheckBoxCadastroPa
 
 			B2 =new JButton("Cadastrar");
 			B2.setSize(100, 40);
-			B2.setLocation(170,470);
+			B2.setLocation(170,490);
 			B2.setMnemonic(KeyEvent.VK_A);
 
 			B3 =new JButton("Cancelar");
 			B3.setSize(90,40);
-			B3.setLocation(280,470);
+			B3.setLocation(280,490);
 			B3.setMnemonic(KeyEvent.VK_C);
 
 			

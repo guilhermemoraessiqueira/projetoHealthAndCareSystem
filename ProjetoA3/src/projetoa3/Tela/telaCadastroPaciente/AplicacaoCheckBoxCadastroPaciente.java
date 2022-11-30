@@ -11,16 +11,16 @@ import javax.swing.JCheckBox;
  * @author Guilherme
  */
 public class AplicacaoCheckBoxCadastroPaciente extends AplicacaoComboBoxCadastroPaciente{
-    JCheckBox check1 = new JCheckBox("Dor aguda moderada ou intensa");
-    JCheckBox check2 = new JCheckBox("Agitação importante");
-    JCheckBox check3 = new JCheckBox(" Falta de ar");
-    JCheckBox check4 = new JCheckBox("Vômitos frequentes e incessantes");
-    JCheckBox check5 = new JCheckBox("Sintomas urinários");
-    JCheckBox check6 = new JCheckBox("Gastrointestinais agudos e intensos");
-    JCheckBox check7 = new JCheckBox("Traumas leves a moderados");
-    JCheckBox check8 = new JCheckBox("Ferimentos cortantes");
-    JCheckBox check9 = new JCheckBox("Alterações sensoriais como diminuição súbita de audição ou visão");
-    JCheckBox check10 = new JCheckBox("Sangramento vaginal em gestantes");
+    JCheckBox check1 = new JCheckBox("Dor aguda moderada ou intensa");  //cod 3
+    JCheckBox check2 = new JCheckBox("Agitação importante"); //cod 4
+    JCheckBox check3 = new JCheckBox(" Falta de ar"); //cod 5
+    JCheckBox check4 = new JCheckBox("Vômitos frequentes e incessantes"); //cod 6
+    JCheckBox check5 = new JCheckBox("Sintomas urinários"); //cod 7
+    JCheckBox check6 = new JCheckBox("Gastrointestinais agudos e intensos"); //cod 8
+    JCheckBox check7 = new JCheckBox("Traumas leves a moderados"); //cod 9
+    JCheckBox check8 = new JCheckBox("Ferimentos cortantes"); //cod 10
+    JCheckBox check9 = new JCheckBox("Outros"); //cod 11
+    
     
     public AplicacaoCheckBoxCadastroPaciente(){
         add(check1);
@@ -47,9 +47,12 @@ public class AplicacaoCheckBoxCadastroPaciente extends AplicacaoComboBoxCadastro
         add(check8);
         check8.setBounds(190, 450, 230, 15);
         
+        add(check9);
+        check9.setBounds(190, 465, 230, 15);
+        
         
         //getContentPane().setLayout(null);
-        getContentPane().add(check1);
+        
     }
     
         public static void main(String[] args) {

@@ -23,6 +23,9 @@ public class Paciente extends Pessoas {
         this.se_sim_qual = se_sim_qual;
     }
 
+    public Paciente() {
+     }
+
     public Date getData_nasc() {
         return data_nasc;
     }
