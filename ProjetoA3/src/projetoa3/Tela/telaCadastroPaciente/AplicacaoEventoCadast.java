@@ -58,9 +58,10 @@ public class AplicacaoEventoCadast extends AplicacaoButtonCadastroPaciente imple
                     
                     //----------------------------------------------------------------------------//
                     
-			if(e.getSource()==B1){
+			                 if (e.getSource() == B1) {
+                        JOptionPane.showMessageDialog(null, "Botao 1");
 
-        }
+                    }
 			if(e.getSource()==B2)
 			{
                             //instanciando textfields para o objeto paciente

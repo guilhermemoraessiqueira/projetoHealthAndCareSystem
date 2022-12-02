@@ -13,10 +13,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import projetoa3.Administrador;
+import projetoa3.Menu.MenuPrincipal.MenuPrincipalEvento;
 import projetoa3.bancoDeDados.AdministradorDAO;
 import projetoa3.Tela.NFrame;
 import projetoa3.bancoDeDados.conexao;
-import projetoa3.Tela.telaCadastroAdm.TodosTela;
 
 /**
  *
@@ -138,7 +138,8 @@ public class AplicacaoEvento extends AplicacaoButton implements ActionListener {
         
         //BOTAO 5 PARA SAIR
         if (e.getSource() == B5) {
-
+            MenuPrincipalEvento telaInicial = new MenuPrincipalEvento();
+            telaInicial.setVisible(true);
             this.dispose();
         }
         

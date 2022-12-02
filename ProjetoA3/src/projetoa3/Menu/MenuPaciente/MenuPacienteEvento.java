@@ -12,7 +12,9 @@ import projetoa3.bancoDeDados.PacienteDAO;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import java.sql.ResultSet;
+import projetoa3.Menu.MenuPrincipal.MenuPrincipalEvento;
 import projetoa3.Tela.telaCadastroPaciente.AplicacaoEventoCadast;
+import projetoa3.Tela.telaIncluirAtendimento.incluirAttEvento;
 
 /**
  *
@@ -31,6 +33,9 @@ public class MenuPacienteEvento extends MenuPacienteButton implements ActionList
     
      public void actionPerformed(ActionEvent e) {
          if (e.getSource() == B1) {
+            MenuPrincipalEvento telaAnterior = new MenuPrincipalEvento();
+            telaAnterior.setVisible(true);
+            this.dispose();
         }
          if (e.getSource() == B2) {
              
@@ -44,8 +49,10 @@ public class MenuPacienteEvento extends MenuPacienteButton implements ActionList
                  ResultSet rs = dao.atutenticacaoCpf(paciente);
                  
                  if (rs.next()) {
-                     JOptionPane.showMessageDialog(null, "VAI PARA TELA DE INCLUIR ATENDIMENTO");
-                     
+                    JOptionPane.showMessageDialog(null, "VAI PARA TELA DE INCLUIR ATENDIMENTO");
+                    incluirAttEvento telaAnterior = new incluirAttEvento();
+                    telaAnterior.setVisible(true);
+                    this.dispose();
                                       
                  } else {
                      JOptionPane.showMessageDialog(null, "VAI PARA TELA DE CADASTRO PACIENTE");

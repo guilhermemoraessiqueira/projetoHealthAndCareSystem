@@ -7,19 +7,11 @@ package projetoa3.Tela.telaLoginAdm.AplicacaoTextLogin;
 import projetoa3.Administrador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import javax.swing.JOptionPane;
-import projetoa3.bancoDeDados.AdministradorDAO;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.naming.spi.DirObjectFactory;
 import projetoa3.Menu.MenuPrincipal.MenuPrincipalEvento;
+import projetoa3.bancoDeDados.AdministradorDAO;
 import projetoa3.Tela.telaCadastroAdm.AplicacaoEvento;
-import projetoa3.Tela.telaCadastroAdm.TodosTela;
-import projetoa3.bancoDeDados.conexao;
+
 
 
 
@@ -35,8 +27,8 @@ public class AplicacaoEventoLogin extends AplicacaoButtonLogin implements Action
     
 		public AplicacaoEventoLogin()
 		{
-			B1.addActionListener(this);// Adiciona ações ao botão
-			B2.addActionListener(this);
+			B1.addActionListener(this);// login
+			B2.addActionListener(this);//cancelar
                         this.setResizable(false);
 			
 			
@@ -80,15 +72,14 @@ public class AplicacaoEventoLogin extends AplicacaoButtonLogin implements Action
                     }
                         
 			if(e.getSource()==B2)
-			{
-			
-                        
-                            
+			{  
 			JOptionPane.showMessageDialog(null, "B2 CANCELAR");
+                            MenuPrincipalEvento telaAnterior = new MenuPrincipalEvento();
+                            telaAnterior.setVisible(true);
+                            this.dispose();
                         
-                        
-			Tx1.setText(" ");
-			Tx2.setText(" ");
+			Tx1.setText("");
+			Tx2.setText("");
                      
 			
 			}
