@@ -12,7 +12,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import projetoa3.Paciente;
-import projetoa3.Tela.NFrame;
+import java.sql.SQLException;
 import projetoa3.bancoDeDados.PacienteDAO;
 import projetoa3.bancoDeDados.conexao;
 
@@ -29,7 +29,8 @@ public class AplicacaoEventoCadast extends AplicacaoButtonCadastroPaciente imple
             
     
 		public AplicacaoEventoCadast(){
-			B1.addActionListener(this);// Adiciona ações ao botão
+                    // Adiciona ações aos botões
+			B1.addActionListener(this);
 			B2.addActionListener(this);
 			B3.addActionListener(this);
                         comboDef.addActionListener(this);
@@ -52,40 +53,31 @@ public class AplicacaoEventoCadast extends AplicacaoButtonCadastroPaciente imple
                                     L7.setVisible(false);                           
                                 }
 
-                    SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+                    SimpleDateFormat formatter = new SimpleDateFormat("dd-mm-yyyy");
                     
+                    
+                    //----------------------------------------------------------------------------//
                     
 			if(e.getSource()==B1){
-           /* try {
-                pacienteBD = new PacienteDAO(conn);
-                paciente.setCpf(Tx2.getText());
-                pacienteBD.consulta(paciente);
 
-                Tx1.setText("" + paciente.getNome());
-                comboDia.setSelectedItem()("" + paciente.getNome());
-
-            } catch (SQLException ex) {
-                Logger.getLogger(AplicacaoEvento.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (ClassNotFoundException ex) {
-                Logger.getLogger(AplicacaoEvento.class.getName()).log(Level.SEVERE, null, ex);
-            }*/
         }
 			if(e.getSource()==B2)
 			{
+                            //instanciando textfields para o objeto paciente
                             paciente.setNome(Tx1.getText());
-                            paciente.setCpf(Tx2.getText());                         
-                           paciente.setSe_sim_qual(Tx3.getText());
+                            paciente.setCpf(Tx2.getText());                           
+                            paciente.setEndereco(Tx4.getText());
                        
-                            String data = (String) comboDia.getSelectedItem() +"/"+ comboMes.getSelectedItem()+"/"+comboAno.getSelectedItem();
+                            //tranformando comboBox em string format DATE
+                            String dataComboBox = (String) comboDia.getSelectedItem() +"-"+ comboMes.getSelectedItem()+"-"+comboAno.getSelectedItem();   
+                            System.out.println(dataComboBox);
                             
-                            System.out.println(data);
-                            
-                            
-                            
-                            try {
-                                
-                                Date date = formatter.parse(data);
-                                System.out.println(date);
+                             //INSTANCIANDO DATA EM PACIENTE
+                            try {  
+                                Date dataDate = formatter.parse(dataComboBox);
+                                System.out.println(dataDate);
+                                paciente.setData_nasc(dataDate);
+                                System.out.println("INSTANCIADO "+paciente.getData_nasc());
                                 
                                 System.out.println("---------------");
                                 
@@ -93,10 +85,43 @@ public class AplicacaoEventoCadast extends AplicacaoButtonCadastroPaciente imple
                                 System.out.println("DATA ATUAL "+formatter.format(calendar.getTime()));
                             } catch (ParseException ex) {
                                 Logger.getLogger(AplicacaoEventoCadast.class.getName()).log(Level.SEVERE, null, ex);
-                            }
-			
-                        
+                            }  
                             
+                            int resultado = JOptionPane.showConfirmDialog(null, "Cadastro do Administrado : \n Usuário: " + Tx1.getText() + "\n CPF: " + Tx2.getText() + "\n Nome: " + Tx3.getText());
+        
+                             if(resultado == JOptionPane.YES_OPTION){
+                                try {
+                                    pacienteBD = new PacienteDAO(conn);
+                                    pacienteBD.insert(paciente);
+
+                                } catch (SQLException ex) {
+                                    Logger.getLogger(AplicacaoEventoCadast.class.getName()).log(Level.SEVERE, null, ex);
+                                } catch (ClassNotFoundException ex) {
+                                    Logger.getLogger(AplicacaoEventoCadast.class.getName()).log(Level.SEVERE, null, ex);
+                                } catch (ParseException ex) {
+                                    Logger.getLogger(AplicacaoEventoCadast.class.getName()).log(Level.SEVERE, null, ex);
+                                }
+                            }
+                            if (resultado == JOptionPane.NO_OPTION) {
+                                JOptionPane.showMessageDialog(null, "Cadastro cancelado");
+                            }
+                            
+                            
+                            
+                            if(comboDef.getSelectedItem()=="Sim"){
+                                paciente.setSe_sim_qual(Tx3.getText());
+                                paciente.setDeficiencia(true);
+                            }else{
+                                paciente.setSe_sim_qual("");
+                            }
+                            
+                            
+                            System.out.println(paciente.getCpf());
+                            System.out.println(paciente.getData_nasc());
+                            System.out.println(paciente.getEndereco());
+                            System.out.println(paciente.getNome());
+                            System.out.println(paciente.getSe_sim_qual());
+                            System.out.println(paciente.isDeficiencia());
 			
                         
                         

@@ -15,12 +15,15 @@ public class Paciente extends Pessoas {
     private Date data_nasc;
     private boolean deficiencia;
     private String se_sim_qual;
+    private String endereco;
+     
 
-    public Paciente(Date data_nasc, boolean deficiencia, String se_sim_qual, String cpf, String nome) {
+    public Paciente(Date data_nasc, boolean deficiencia, String se_sim_qual, String cpf, String nome, String endereco) {
         super(cpf, nome);
         this.data_nasc = data_nasc;
         this.deficiencia = deficiencia;
         this.se_sim_qual = se_sim_qual;
+        this.endereco = endereco;
     }
 
     public Paciente() {
@@ -75,6 +78,19 @@ public class Paciente extends Pessoas {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public void setData_nasc(String data) {
+         }
+    
+    
     
 
 }

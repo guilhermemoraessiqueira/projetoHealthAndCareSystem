@@ -44,11 +44,14 @@ public class MenuPacienteEvento extends MenuPacienteButton implements ActionList
                  ResultSet rs = dao.atutenticacaoCpf(paciente);
                  
                  if (rs.next()) {
-                     JOptionPane.showMessageDialog(null, "VAI PARA TELA DE INCLUIR CADASTRO");
+                     JOptionPane.showMessageDialog(null, "VAI PARA TELA DE INCLUIR ATENDIMENTO");
                      
+                                      
                  } else {
                      JOptionPane.showMessageDialog(null, "VAI PARA TELA DE CADASTRO PACIENTE");
-                 
+                 AplicacaoEventoCadast t = new AplicacaoEventoCadast();
+                 t.setVisible(true);
+                 this.dispose();
                  }
                  
 

@@ -34,10 +34,10 @@ public class AplicacaoTextCadastroPaciente extends AplicacaoLabelCadastroPacient
 			Tx4.setBounds(190,240,150,20);
 
 						
-			getContentPane().add(Tx1);
-			getContentPane().add(Tx2);
-                        getContentPane().add(Tx3);
-                        getContentPane().add(Tx4); 
+			getContentPane().add(Tx1);//NOME
+			getContentPane().add(Tx2);//CPF
+                        getContentPane().add(Tx3); // SE SIM QUAL
+                        getContentPane().add(Tx4); //ENDEREÇO
                          
 
 			

@@ -26,15 +26,15 @@ public class AplicacaoComboBoxCadastroPaciente extends AplicacaoTextCadastroPaci
         
         
         //adicionando itens ao dia
-        comboDia.addItem("1");
-        comboDia.addItem("2");
-        comboDia.addItem("3");
-        comboDia.addItem("4");
-        comboDia.addItem("5");
-        comboDia.addItem("6");
-        comboDia.addItem("7");
-        comboDia.addItem("8");
-        comboDia.addItem("9");
+        comboDia.addItem("01");
+        comboDia.addItem("02");
+        comboDia.addItem("03");
+        comboDia.addItem("04");
+        comboDia.addItem("05");
+        comboDia.addItem("06");
+        comboDia.addItem("07");
+        comboDia.addItem("08");
+        comboDia.addItem("09");
         comboDia.addItem("10");
         comboDia.addItem("11");
         comboDia.addItem("12");
@@ -64,15 +64,15 @@ public class AplicacaoComboBoxCadastroPaciente extends AplicacaoTextCadastroPaci
         add(comboMes);
         
         //adicionando itens ao mes
-        comboMes.addItem("1");
-        comboMes.addItem("2");
-        comboMes.addItem("3");
-        comboMes.addItem("4");
-        comboMes.addItem("5");
-        comboMes.addItem("6");
-        comboMes.addItem("7");
-        comboMes.addItem("8");
-        comboMes.addItem("9");
+        comboMes.addItem("01");
+        comboMes.addItem("02");
+        comboMes.addItem("03");
+        comboMes.addItem("04");
+        comboMes.addItem("05");
+        comboMes.addItem("06");
+        comboMes.addItem("07");
+        comboMes.addItem("08");
+        comboMes.addItem("09");
         comboMes.addItem("10");
         comboMes.addItem("11");
         comboMes.addItem("12");

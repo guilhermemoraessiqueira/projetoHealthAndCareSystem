@@ -8,6 +8,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.swing.JOptionPane;
 import projetoa3.Paciente;
 import projetoa3.bancoDeDados.conexao;
@@ -25,12 +29,21 @@ public class PacienteDAO {
     public PacienteDAO() {
     }
              
-         public void insert(Paciente paciente) {
-            String sql =   "INSERT INTO pacientes (usuario, senha, cpf, nome) VALUES (" +"\"" 
-                + paciente.getNome() + "\",\""
+         public void insert(Paciente paciente) throws ParseException {
+       
+             //mudando formato data_nasc de dd-mm-yyyy para yyyy-mm-dd para por no Banco de dados
+                SimpleDateFormat formatador = new SimpleDateFormat("yyyy-mm-dd");
+                String dataFormatada = formatador.format(paciente.getData_nasc());
+                System.out.println(dataFormatada);
+             
+             
+             String dia1 = paciente.getData_nasc().toString();
+ 
+            String sql =   "INSERT INTO pacientes (cpf, nome, data_nasc, endereco) VALUES (" +"\"" 
                 + paciente.getCpf() + "\",\""
-                + paciente.getData_nasc()+ "\",\""
-                + paciente.getSe_sim_qual()+ "\");";
+                + paciente.getNome() + "\",\""
+                + dataFormatada+ "\",\""
+                + paciente.getEndereco()+ "\");";
             
          System.out.println(sql);
          
@@ -44,6 +57,7 @@ public class PacienteDAO {
           } catch (SQLException e) {
           e.printStackTrace();
          }
+         
          }
          public void consulta(Paciente paciente) {    
              String sql =   "SELECT * from administradores where cpf=" + paciente.getCpf();
