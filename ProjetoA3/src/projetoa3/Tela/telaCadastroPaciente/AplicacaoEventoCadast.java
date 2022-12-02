@@ -10,11 +10,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
-import projetoa3.Administrador;
 import projetoa3.Paciente;
-import projetoa3.bancoDeDados.AdministradorDAO;
 import projetoa3.Tela.NFrame;
 import projetoa3.bancoDeDados.PacienteDAO;
 import projetoa3.bancoDeDados.conexao;
@@ -82,6 +79,8 @@ public class AplicacaoEventoCadast extends AplicacaoButtonCadastroPaciente imple
                             String data = (String) comboDia.getSelectedItem() +"/"+ comboMes.getSelectedItem()+"/"+comboAno.getSelectedItem();
                             
                             System.out.println(data);
+                            
+                            
                             
                             try {
                                 

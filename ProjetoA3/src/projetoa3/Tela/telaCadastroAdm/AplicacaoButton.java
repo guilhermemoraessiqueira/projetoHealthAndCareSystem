@@ -48,7 +48,7 @@ public class AplicacaoButton extends AplicacaoText {
         B6.setLocation(380, 120);
         B6.setMnemonic(KeyEvent.VK_T);
 
-        
+        getContentPane().add(B1);
         getContentPane().add(B2);
         getContentPane().add(B3);
         getContentPane().add(B4);

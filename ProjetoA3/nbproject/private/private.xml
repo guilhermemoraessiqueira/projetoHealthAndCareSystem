@@ -4,13 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Guilherme/Documents/Estudos/projetoHealthAndCareSystem/ProjetoA3/src/projetoa3/Tela/telaCadastroPaciente/AplicacaoEventoCadast.java</file>
-            <file>file:/C:/Users/Guilherme/Documents/Estudos/projetoHealthAndCareSystem/ProjetoA3/src/projetoa3/Tela/telaCadastroPaciente/AplicacaoButtonCadastroPaciente.java</file>
-            <file>file:/C:/Users/Guilherme/Documents/Estudos/projetoHealthAndCareSystem/ProjetoA3/src/projetoa3/Administrador.java</file>
             <file>file:/C:/Users/Guilherme/Documents/Estudos/projetoHealthAndCareSystem/ProjetoA3/src/projetoa3/Tela/telaCadastroAdm/AplicacaoEvento.java</file>
-            <file>file:/C:/Users/Guilherme/Documents/Estudos/projetoHealthAndCareSystem/ProjetoA3/src/projetoa3/Paciente.java</file>
-            <file>file:/C:/Users/Guilherme/Documents/Estudos/projetoHealthAndCareSystem/ProjetoA3/src/projetoa3/Tela/telaCadastroPaciente/AplicacaoComboBoxCadastroPaciente.java</file>
-            <file>file:/C:/Users/Guilherme/Documents/Estudos/projetoHealthAndCareSystem/ProjetoA3/src/projetoa3/bancoDeDados/AdministradorDAO.java</file>
-            <file>file:/C:/Users/Guilherme/Documents/Estudos/projetoHealthAndCareSystem/ProjetoA3/src/projetoa3/bancoDeDados/PacienteDAO.java</file>
+            <file>file:/C:/Users/Guilherme/Documents/Estudos/projetoHealthAndCareSystem/ProjetoA3/src/projetoa3/Tela/telaCadastroAdm/AplicacaoButton.java</file>
+            <file>file:/C:/Users/Guilherme/Documents/Estudos/projetoHealthAndCareSystem/ProjetoA3/src/projetoa3/Tela/telaCadastroAdm/AplicacaoLabel.java</file>
+            <file>file:/C:/Users/Guilherme/Documents/Estudos/projetoHealthAndCareSystem/ProjetoA3/src/projetoa3/Tela/telaCadastroAdm/AplicacaoText.java</file>
         </group>
     </open-files>
 </project-private>

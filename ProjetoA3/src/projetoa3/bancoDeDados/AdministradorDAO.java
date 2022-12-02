@@ -174,6 +174,8 @@ public class AdministradorDAO {
         return dados;
        }
     
+    
+    
     public boolean existe (Administrador administador) throws Exception{
       
        String sql = "SELECT * FROM administradores WHERE senha = ? AND usuario = ?";

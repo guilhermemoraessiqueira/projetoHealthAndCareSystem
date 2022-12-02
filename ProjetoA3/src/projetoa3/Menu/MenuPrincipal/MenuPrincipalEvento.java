@@ -7,6 +7,7 @@ package projetoa3.Menu.MenuPrincipal;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
+import projetoa3.Menu.MenuPaciente.MenuPacienteEvento;
 import projetoa3.Tela.NFrame;
 import projetoa3.Tela.telaCadastroPaciente.AplicacaoEventoCadast;
 import projetoa3.Tela.telaLoginAdm.AplicacaoTextLogin.AplicacaoEventoLogin;
@@ -26,7 +27,7 @@ public class MenuPrincipalEvento extends MenuPrincipalButton  implements ActionL
     }
 
    
-    //BOTAO 1 PARA INCLUIR
+    //ADMINISTRATIVO
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == B1) {
                JOptionPane.showMessageDialog(null,"B1");
@@ -34,14 +35,12 @@ public class MenuPrincipalEvento extends MenuPrincipalButton  implements ActionL
                 t.setVisible(true);
                 this.dispose();
         }
-        
-        
-        //BOTAO 2 PARA ALTERAR
+
         if (e.getSource() == B2) {
-JOptionPane.showMessageDialog(null,"B2");
-AplicacaoEventoCadast t = new AplicacaoEventoCadast(); 
-                t.setVisible(true);
-                this.dispose();
+            JOptionPane.showMessageDialog(null, "B2");
+            MenuPacienteEvento t = new MenuPacienteEvento();
+            t.setVisible(true);
+            this.dispose();
 
         }
 

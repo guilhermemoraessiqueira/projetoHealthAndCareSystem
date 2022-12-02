@@ -9,7 +9,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
-import projetoa3.Administrador;
 import projetoa3.Paciente;
 import projetoa3.bancoDeDados.conexao;
 /**
@@ -22,6 +21,9 @@ public class PacienteDAO {
     public PacienteDAO(conexao conn) throws SQLException, ClassNotFoundException {
               c = conn.obtemConexao();
            }
+
+    public PacienteDAO() {
+    }
              
          public void insert(Paciente paciente) {
             String sql =   "INSERT INTO pacientes (usuario, senha, cpf, nome) VALUES (" +"\"" 
@@ -64,4 +66,31 @@ public class PacienteDAO {
                 }
         
     }
+         public ResultSet atutenticacaoCpf(Paciente paciente){
+        Connection conn = new conexao().obtemConexao();
+        
+             try {
+                 String sql = "SELECT * FROM pacientes WHERE cpf= ?";
+                 PreparedStatement pstm = conn.prepareStatement(sql);
+                 pstm.setString(1, paciente.getCpf());
+                 
+                 ResultSet rs = pstm.executeQuery();
+                 return rs;
+                 
+             } catch (SQLException erro) {
+                 JOptionPane.showMessageDialog(null, "classe pacienteDAO "+ erro);
+                 return null;
+                         
+                 
+             }
+        
+             
+             
+             
+         }
+       
+    
+    
+   
+
 }

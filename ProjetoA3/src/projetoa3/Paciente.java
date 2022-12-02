@@ -26,6 +26,10 @@ public class Paciente extends Pessoas {
     public Paciente() {
      }
 
+    public Paciente(String cpf) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     public Date getData_nasc() {
         return data_nasc;
     }
@@ -55,5 +59,22 @@ public class Paciente extends Pessoas {
 
     public void incluirCadastro() {
     }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    
 
 }
