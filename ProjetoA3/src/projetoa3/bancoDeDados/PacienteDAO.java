@@ -8,10 +8,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import javax.swing.JOptionPane;
 import projetoa3.Paciente;
 import projetoa3.bancoDeDados.conexao;
@@ -60,7 +58,7 @@ public class PacienteDAO {
          
          }
          public void consulta(Paciente paciente) {    
-             String sql =   "SELECT * from administradores where cpf=" + paciente.getCpf();
+             String sql =   "SELECT * from paciente where cpf=" + paciente.getCpf();
              System.out.println(sql);
              try {
 

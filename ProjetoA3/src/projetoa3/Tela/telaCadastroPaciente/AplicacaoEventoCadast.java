@@ -43,6 +43,7 @@ public class AplicacaoEventoCadast extends AplicacaoButtonCadastroPaciente imple
                          
 		}
 
+
 		public void actionPerformed(ActionEvent e)//
 		{
                     if(comboDef.getSelectedItem() == "Sim"){

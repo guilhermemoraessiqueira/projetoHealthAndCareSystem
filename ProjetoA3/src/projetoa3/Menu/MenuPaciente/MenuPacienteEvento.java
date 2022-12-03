@@ -12,6 +12,9 @@ import projetoa3.bancoDeDados.PacienteDAO;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import java.sql.ResultSet;
+import java.text.ParseException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import projetoa3.Menu.MenuPrincipal.MenuPrincipalEvento;
 import projetoa3.Tela.telaCadastroPaciente.AplicacaoEventoCadast;
 import projetoa3.Tela.telaIncluirAtendimento.incluirAttEvento;
@@ -29,28 +32,32 @@ public class MenuPacienteEvento extends MenuPacienteButton implements ActionList
         B3.addActionListener((ActionListener) this);// cancelar
         this.setResizable(false);
         
+        
         }
+            String cpf = Tx1.getText();
     
      public void actionPerformed(ActionEvent e) {
          if (e.getSource() == B1) {
             MenuPrincipalEvento telaAnterior = new MenuPrincipalEvento();
             telaAnterior.setVisible(true);
             this.dispose();
+             
         }
          if (e.getSource() == B2) {
              
              try {
-                 String cpf = Tx1.getText();
+                 String cpf = Tx1.getText();              
 
                  Paciente paciente = new Paciente();
                  paciente.setCpf(cpf);
-
+                 
                  PacienteDAO dao = new PacienteDAO();
                  ResultSet rs = dao.atutenticacaoCpf(paciente);
-                 
+                  
                  if (rs.next()) {
+                    
                     JOptionPane.showMessageDialog(null, "VAI PARA TELA DE INCLUIR ATENDIMENTO");
-                    incluirAttEvento telaAnterior = new incluirAttEvento();
+                    incluirAttEvento telaAnterior = new incluirAttEvento(cpf);
                     telaAnterior.setVisible(true);
                     this.dispose();
                                       
@@ -64,19 +71,18 @@ public class MenuPacienteEvento extends MenuPacienteButton implements ActionList
 
              } catch (SQLException ea) {
                  JOptionPane.showMessageDialog(null, "ERRO MENU PACIENTE EVENTO");
+             } catch (ParseException ex) {
+                 Logger.getLogger(MenuPacienteEvento.class.getName()).log(Level.SEVERE, null, ex);
              }
-             
-             
-             
-             
 
          }
         
         if (e.getSource() == B3) {
         }
-        
-    
+   
 }
+
+           
   public static void main(String arg[]) {
         NFrameLogin Fx = new MenuPacienteEvento();
         Fx.show();
