@@ -13,6 +13,8 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import projetoa3.Paciente;
 import java.sql.SQLException;
+import projetoa3.Menu.MenuPaciente.MenuPacienteEvento;
+import projetoa3.Menu.MenuPrincipal.MenuPrincipalEvento;
 import projetoa3.bancoDeDados.PacienteDAO;
 import projetoa3.bancoDeDados.conexao;
 
@@ -133,7 +135,24 @@ public class AplicacaoEventoCadast extends AplicacaoButtonCadastroPaciente imple
 			}
 			if (e.getSource() == B3)
 			{
-				JOptionPane.showMessageDialog(null, "Botao 3");
+				int resultado = JOptionPane.showConfirmDialog(null, "Deseja cancelar seu cadastro?");                            
+                                if(resultado == JOptionPane.YES_OPTION){
+                                    try {
+                                        MenuPrincipalEvento telaInicial = new MenuPrincipalEvento();
+                                        telaInicial.setVisible(true);
+                                        this.dispose();
+                                    } catch (Exception a) {
+                                        JOptionPane.showMessageDialog(null,"Erro APLICAÇÃO CADAST");
+                                    }
+        
+                            }
+                            else{
+                                AplicacaoEventoCadast t = new AplicacaoEventoCadast();
+                                t.setVisible(true);
+                                this.dispose();
+                            }
+                                        
+                               
                                 
                                 
                            
