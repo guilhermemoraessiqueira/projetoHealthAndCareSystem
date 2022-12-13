@@ -30,14 +30,14 @@ public class MenuPrincipalEvento extends MenuPrincipalButton  implements ActionL
     //ADMINISTRATIVO
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == B1) {
-               JOptionPane.showMessageDialog(null,"B1");
+               JOptionPane.showMessageDialog(null,"Administrador");
                AplicacaoEventoLogin t = new AplicacaoEventoLogin(); 
                 t.setVisible(true);
                 this.dispose();
         }
 
         if (e.getSource() == B2) {
-            JOptionPane.showMessageDialog(null, "B2");
+            JOptionPane.showMessageDialog(null, "Atendimento");
             MenuPacienteEvento t = new MenuPacienteEvento();
             t.setVisible(true);
             this.dispose();
@@ -47,7 +47,7 @@ public class MenuPrincipalEvento extends MenuPrincipalButton  implements ActionL
         
         //BOTAO 3 PARA CONSULTAR
         if (e.getSource() == B3) {
-            JOptionPane.showMessageDialog(null,"VAI PARA FILA");
+            JOptionPane.showMessageDialog(null,"Consultar fila");
             
         }        
     }

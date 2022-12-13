@@ -1,15 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package projetoa3.Tela.telaCadastroPaciente;
 
 import javax.swing.JCheckBox;
 
-/**
- *
- * @author Guilherme
- */
 public class AplicacaoCheckBoxCadastroPaciente extends AplicacaoComboBoxCadastroPaciente{
     JCheckBox check1 = new JCheckBox("Dor aguda moderada ou intensa");  //cod 3
     JCheckBox check2 = new JCheckBox("Agitação importante"); //cod 4
@@ -48,16 +40,6 @@ public class AplicacaoCheckBoxCadastroPaciente extends AplicacaoComboBoxCadastro
         check8.setBounds(190, 450, 230, 15);
         
         add(check9);
-        check9.setBounds(190, 465, 230, 15);
-        
-        
-        //getContentPane().setLayout(null);
-        
+        check9.setBounds(190, 465, 230, 15);   
     }
-    
-        public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		new AplicacaoCheckBoxCadastroPaciente().show();
-
-	}
 }

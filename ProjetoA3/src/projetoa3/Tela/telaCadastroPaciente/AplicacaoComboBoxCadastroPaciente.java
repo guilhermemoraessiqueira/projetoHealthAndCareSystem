@@ -1,18 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package projetoa3.Tela.telaCadastroPaciente;
 
-
 import javax.swing.JComboBox;
-import javax.swing.JOptionPane;
 
-
-/**
- *
- * @author Guilherme
- */
 public class AplicacaoComboBoxCadastroPaciente extends AplicacaoTextCadastroPaciente{
     //classe rap de int
     JComboBox<String> comboDia = new JComboBox<>();
@@ -207,40 +196,24 @@ public class AplicacaoComboBoxCadastroPaciente extends AplicacaoTextCadastroPaci
         comboAno.addItem("2020");
         comboAno.addItem("2021");
         comboAno.addItem("2022");
-        
-        
-        
-        
-       
+
         //colocando o item 1 como selecionado ao inicializar
         comboAno.setSelectedIndex(0);
         comboAno.setBounds(300, 200, 60, 20);
-        
-        
+
         add(comboDef);
-        
         //adicionando itens 
-       
         comboDef.addItem(" ");       
         comboDef.addItem("Não");
         comboDef.addItem("Sim");
 
-        
         //colocando o item 1 como selecionado ao inicializar
         comboDef.setSelectedIndex(0);
         comboDef.setBounds(190, 280, 50, 20);
-        
-        
-        
+
         getContentPane().add(comboDef);
         getContentPane().add(comboDia);
         getContentPane().add(comboMes);
         getContentPane().add(comboAno);
-
-    }
-    
-    public static void main(String[] args) {
-        new AplicacaoComboBoxCadastroPaciente().show();
-    }
-    
+    }   
 }

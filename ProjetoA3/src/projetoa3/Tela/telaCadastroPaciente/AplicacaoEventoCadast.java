@@ -13,7 +13,6 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import projetoa3.Paciente;
 import java.sql.SQLException;
-import projetoa3.Menu.MenuPaciente.MenuPacienteEvento;
 import projetoa3.Menu.MenuPrincipal.MenuPrincipalEvento;
 import projetoa3.bancoDeDados.PacienteDAO;
 import projetoa3.bancoDeDados.conexao;

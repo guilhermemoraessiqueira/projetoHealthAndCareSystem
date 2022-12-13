@@ -1,15 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package projetoa3.Tela.telaIncluirAtendimento;
 
 import javax.swing.JCheckBox;
 
-/**
- *
- * @author Guilherme
- */
 public class incluirAttCheckBox extends incluirAttLabel{
     JCheckBox check1 = new JCheckBox("Dor aguda moderada ou intensa");  //cod 3
     JCheckBox check2 = new JCheckBox("Agitação importante"); //cod 4
@@ -47,16 +39,6 @@ public incluirAttCheckBox(){
         check8.setBounds(120, 175, 230, 15);
         
         add(check9);
-        check9.setBounds(120, 190, 230, 15);
-        
-        
-        //getContentPane().setLayout(null);
-        
+        check9.setBounds(120, 190, 230, 15);   
     }
-    
-        public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		new incluirAttCheckBox().show();
-
-	}
 }

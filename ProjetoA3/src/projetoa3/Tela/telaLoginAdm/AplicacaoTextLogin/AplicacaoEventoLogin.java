@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package projetoa3.Tela.telaLoginAdm.AplicacaoTextLogin;
 
 import projetoa3.Administrador;
@@ -12,13 +8,6 @@ import projetoa3.Menu.MenuPrincipal.MenuPrincipalEvento;
 import projetoa3.bancoDeDados.AdministradorDAO;
 import projetoa3.Tela.telaCadastroAdm.AplicacaoEvento;
 
-
-
-
-/**
- *
- * @author Guilherme
- */
 public class AplicacaoEventoLogin extends AplicacaoButtonLogin implements ActionListener
 	{
     
@@ -80,21 +69,11 @@ public class AplicacaoEventoLogin extends AplicacaoButtonLogin implements Action
                         
 			Tx1.setText("");
 			Tx2.setText("");
-                     
-			
-			}
-                        
-                        
-                        
-                        
-                        
+			}       
 		}
 
-		public static void main ( String arg[])
-		{
+		public static void main ( String arg[]){
 			NFrameLogin Fx = new AplicacaoEventoLogin();
 			Fx. show();
-		}
-
-       
+}       
 }

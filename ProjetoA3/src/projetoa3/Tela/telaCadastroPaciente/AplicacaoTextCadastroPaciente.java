@@ -1,16 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package projetoa3.Tela.telaCadastroPaciente;
 
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
-/**
- *
- * @author Guilherme
- */
 public class AplicacaoTextCadastroPaciente extends AplicacaoLabelCadastroPaciente{
     public JTextField Tx1, Tx2,Tx3,Tx4;
 		
@@ -38,15 +30,5 @@ public class AplicacaoTextCadastroPaciente extends AplicacaoLabelCadastroPacient
 			getContentPane().add(Tx2);//CPF
                         getContentPane().add(Tx3); // SE SIM QUAL
                         getContentPane().add(Tx4); //ENDEREÇO
-                         
-
-			
 		}
-
-		public static void main(String arg[])
-		{
-			new AplicacaoTextCadastroPaciente().show();
-		}
-
-    
 }

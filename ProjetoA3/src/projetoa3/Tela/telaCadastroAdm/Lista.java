@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package projetoa3.Tela.telaCadastroAdm;
 
 import java.awt.Color;
@@ -10,10 +6,6 @@ import javax.swing.*;
 import projetoa3.Administrador;
 import projetoa3.Tela.NFrame;
 
-/**
- *
- * @author Guilherme
- */
 public class Lista extends NFrame {
 	JLabel L2;
 	DefaultListModel lista ;
@@ -54,14 +46,10 @@ public class Lista extends NFrame {
 		P1.setBorder(BorderFactory.createLineBorder(Color.black,2));
 		P1.setLayout(null);
 		P1.add(itens);
-		
-		 
+ 
 		getContentPane().setBackground(Color.yellow);
 		getContentPane().setLayout(null);
 		getContentPane().add(L2);
-		getContentPane().add(P1);
-		
-		
-	}
-		
+		getContentPane().add(P1);	
+	}		
 }

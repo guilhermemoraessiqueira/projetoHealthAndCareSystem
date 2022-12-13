@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package projetoa3.Tela.telaCadastroAdm;
 
 
@@ -18,10 +14,6 @@ import projetoa3.bancoDeDados.AdministradorDAO;
 import projetoa3.Tela.NFrame;
 import projetoa3.bancoDeDados.conexao;
 
-/**
- *
- * @author Guilherme
- */
 public class AplicacaoEvento extends AplicacaoButton implements ActionListener {
 
     Administrador administrador = new Administrador();

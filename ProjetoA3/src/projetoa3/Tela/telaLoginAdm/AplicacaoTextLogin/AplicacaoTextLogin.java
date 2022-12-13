@@ -1,16 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package projetoa3.Tela.telaLoginAdm.AplicacaoTextLogin;
 
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
-/**
- *
- * @author Guilherme
- */
 public class AplicacaoTextLogin extends AplicacaoLabelLogin{
     public JTextField Tx1;
     public JPasswordField Tx2;
@@ -25,14 +17,6 @@ public class AplicacaoTextLogin extends AplicacaoLabelLogin{
 			Tx2.setBounds(103,100,162,20);
                         
                         getContentPane().add(Tx1);
-			getContentPane().add(Tx2);
-                        
-		}
-
-		public static void main(String arg[])
-		{
-			new AplicacaoTextLogin().show();
-		}
-
-    
+			getContentPane().add(Tx2);                    
+		}   
 }

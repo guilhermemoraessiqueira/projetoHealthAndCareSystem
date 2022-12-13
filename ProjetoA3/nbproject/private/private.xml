@@ -3,13 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Guilherme/Documents/Estudos/projetoHealthAndCareSystem/ProjetoA3/src/projetoa3/Tela/telaCadastroPaciente/AplicacaoEventoCadast.java</file>
-            <file>file:/C:/Users/Guilherme/Documents/Estudos/projetoHealthAndCareSystem/ProjetoA3/src/projetoa3/Tela/telaIncluirAtendimento/incluirAttEvento.java</file>
-            <file>file:/C:/Users/Guilherme/Documents/Estudos/projetoHealthAndCareSystem/ProjetoA3/src/projetoa3/bancoDeDados/AtendimentoDAO.java</file>
-            <file>file:/C:/Users/Guilherme/Documents/Estudos/projetoHealthAndCareSystem/ProjetoA3/src/projetoa3/Paciente.java</file>
-            <file>file:/C:/Users/Guilherme/Documents/Estudos/projetoHealthAndCareSystem/ProjetoA3/src/projetoa3/Menu/MenuPaciente/MenuPacienteEvento.java</file>
-            <file>file:/C:/Users/Guilherme/Documents/Estudos/projetoHealthAndCareSystem/ProjetoA3/src/projetoa3/Atendimento.java</file>
-            <file>file:/C:/Users/Guilherme/Documents/Estudos/projetoHealthAndCareSystem/ProjetoA3/src/projetoa3/bancoDeDados/PacienteDAO.java</file>
+            <file>file:/C:/Users/Guilherme/Documents/Estudos/projetoHealthAndCareSystem/ProjetoA3/src/projetoa3/Menu/MenuPrincipal/MenuPrincipalEvento.java</file>
         </group>
     </open-files>
 </project-private>

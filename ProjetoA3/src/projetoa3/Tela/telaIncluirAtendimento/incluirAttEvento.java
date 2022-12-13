@@ -1,12 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package projetoa3.Tela.telaIncluirAtendimento;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.SQLException;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -19,15 +14,7 @@ import projetoa3.bancoDeDados.conexao;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Calendar;
-import projetoa3.Paciente;
 
-/**
- *
- * @author Guilherme
- */
 public class incluirAttEvento extends incluirAttButton implements ActionListener{
     
     
@@ -54,15 +41,7 @@ public class incluirAttEvento extends incluirAttButton implements ActionListener
 
         atendimento.setData_de_atendimento(dataFormatada);
         System.out.println(atendimento.getData_de_atendimento());
-        
-        
-        
-       
-        
-        
-        
-        
-        
+ 
         //instanciar PRIORIDADE
         if(check9.isSelected()){
             atendimento.setPrioridade(3);
@@ -80,9 +59,7 @@ public class incluirAttEvento extends incluirAttButton implements ActionListener
     public void actionPerformed(ActionEvent e){
         if (e.getSource() == B1) {
             //B INCLUIR
-            
-            
-            
+    
             JOptionPane.showMessageDialog(null,"INCLUIR");
             try {
                 atendimentoBD = new AtendimentoDAO(conn);
@@ -102,10 +79,7 @@ public class incluirAttEvento extends incluirAttButton implements ActionListener
             MenuPacienteEvento telaAnterior = new MenuPacienteEvento();
             telaAnterior.setVisible(true);
             this.dispose();
-            
-
-        }
-        
+        }   
     }public static void main(String arg[]) {
         NFrame Fx = new incluirAttEvento();
         Fx.show();

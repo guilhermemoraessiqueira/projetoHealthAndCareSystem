@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package projetoa3.Menu.MenuPrincipal;
 
 import java.awt.Color;
@@ -11,10 +7,6 @@ import javax.swing.JLabel;
 import projetoa3.Tela.NFrame;
 import projetoa3.Tela.telaCadastroAdm.AplicacaoEvento;
 
-/**
- *
- * @author Guilherme
- */
 public class MenuPrincipalLabel extends NFrame{
     JLabel L1;
     Color cor1 = new Color(13, 28, 102);
@@ -30,11 +22,5 @@ public class MenuPrincipalLabel extends NFrame{
         getContentPane().setLayout(null);
         getContentPane().add(L1);
         
-    }
-    public static void main(String arg[]) {
-        NFrame Fx = new MenuPrincipalLabel();
-        Fx.show();
-    }
-    
-    
+    }   
 }

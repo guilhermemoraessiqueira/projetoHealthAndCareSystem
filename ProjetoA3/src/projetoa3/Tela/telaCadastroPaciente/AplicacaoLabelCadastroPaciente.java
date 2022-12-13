@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package projetoa3.Tela.telaCadastroPaciente;
 
 import java.awt.Color;
@@ -10,10 +6,6 @@ import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 import projetoa3.Tela.NFrame;
 
-/**
- *
- * @author Guilherme
- */
 public class AplicacaoLabelCadastroPaciente extends NFrame{
     
     JLabel L1, L2,L3,L4,L5,L6,L7,L8;
@@ -74,16 +66,6 @@ public class AplicacaoLabelCadastroPaciente extends NFrame{
                 getContentPane().add(L6);
                 getContentPane().add(L7);
                 getContentPane().add(L8);
-                
-               
-                
-
-
-	}
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		new AplicacaoLabelCadastroPaciente().show();
-
 	}
 }
 

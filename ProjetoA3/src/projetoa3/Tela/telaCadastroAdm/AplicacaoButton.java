@@ -1,17 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package projetoa3.Tela.telaCadastroAdm;
 
 import projetoa3.Tela.telaCadastroAdm.AplicacaoText;
 import java.awt.event.KeyEvent;
 import javax.swing.JButton;
 
-/**
- *
- * @author Guilherme
- */
 public class AplicacaoButton extends AplicacaoText {
 
     JButton B1, B2, B3, B4, B5, B6;
